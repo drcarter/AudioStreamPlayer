@@ -33,11 +33,6 @@ public class AudioStreamPlayer
 		this.mListener = listener;
 	}
 
-	public OnAudioStreamInterface getDelegate()
-	{
-		return this.mListener;
-	}
-
 	public enum State
 	{
 		Stopped, Prepare, Buffering, Playing, Pause
