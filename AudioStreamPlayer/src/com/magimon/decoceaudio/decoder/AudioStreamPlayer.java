@@ -22,8 +22,6 @@ public class AudioStreamPlayer
 	private AudioTrack mAudioTrack = null;
 
 	private int mInputBufIndex = 0;
-	// private int mBufIndexCheck = 0;
-	// private int mLastInputBufIndex = 0;
 
 	private boolean isForceStop = false;
 	private volatile boolean isPause = false;
@@ -68,8 +66,6 @@ public class AudioStreamPlayer
 	{
 		mState = State.Prepare;
 		isForceStop = false;
-		// mBufIndexCheck = 0;
-		// mLastInputBufIndex = -1;
 
 		mAudioPlayerHandler.onAudioPlayerBuffering(AudioStreamPlayer.this);
 
@@ -223,7 +219,6 @@ public class AudioStreamPlayer
 				}
 
 				mInputBufIndex = mMediaCodec.dequeueInputBuffer(kTimeOutUs);
-				// mBufIndexCheck++;
 				if (mInputBufIndex >= 0)
 				{
 					ByteBuffer dstBuf = codecInputBuffers[mInputBufIndex];
@@ -357,8 +352,6 @@ public class AudioStreamPlayer
 	public void pause()
 	{
 		isPause = true;
-
-//		this.mState = State.Pause;
 	}
 
 	public void stop()
