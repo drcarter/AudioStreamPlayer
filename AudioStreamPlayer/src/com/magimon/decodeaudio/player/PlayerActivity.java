@@ -165,7 +165,7 @@ public class PlayerActivity extends Activity implements OnAudioStreamInterface, 
 		mAudioPlayer = new AudioStreamPlayer();
 		mAudioPlayer.setOnAudioStreamInterface(this);
 
-		mAudioPlayer.setUrlString("http://mobileapplist.clubmnet.com/LuckyStrike.mp3");
+		mAudioPlayer.setUrlString("url path");
 
 		// showGUIBuffering();
 
