@@ -142,8 +142,8 @@ public class AudioStreamPlayer
 
 	private void decodeLoop()
 	{
-		ByteBuffer[] codecInputBuffers;
-		ByteBuffer[] codecOutputBuffers;
+		ByteBuffer[] codecInputBuffers = null;
+		ByteBuffer[] codecOutputBuffers = null;
 
 		mExtractor = new MediaExtractor();
 		try
